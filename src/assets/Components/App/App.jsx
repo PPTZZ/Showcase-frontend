@@ -1,5 +1,5 @@
 // import { useState, useEffect } from "react";
-// import Login from '../Login/Login'
+import Login from '../Login/Login'
 // import Register from "../Register/Register";
 
 const App = ()=> {
@@ -7,7 +7,7 @@ const App = ()=> {
 
     return(
         <>
-        {/* <Login/> */}
+        <Login/>
         {/* <Register/> */}
         </>
     )
