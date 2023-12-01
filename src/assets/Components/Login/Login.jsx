@@ -38,7 +38,7 @@ const Login = ()=>{
                 <p 
                     id='register'
                     className= 'linkText'>
-                    {"Don't have an account? Sign up here."}
+                    {"Don't have an account? Sign up"}
                 </p>
 
             </div>
