@@ -1,40 +1,51 @@
+import '../Login/login.css';
+
 const Register = ()=>{
     return(
-        <div className="cardContainer">
-            <div className="card">
-            <label htmlFor="name">name: </label>
-                <input 
-                    id ='name' 
-                    className = 'inputField'
-                    type = 'name'
-                    required
-                />
-                <br/>
-                <label htmlFor="email">e-mail: </label>
-                <input 
-                    type='email'
-                    id='email'
-                    required
-                />
-                <br/>
-                <label htmlFor="password">password: </label>
-                <input 
-                    id ='password' 
-                    className = 'inputField'
-                    type = 'password'
-                    required
-                />
-                <br/>
+        <div className='cardContainer'>
+            <img src='/desktop-image.svg' className='backgroundImage'/>
+            <div className='card'>
+                <h1>Sign up</h1>
+                <div>
+                    <label htmlFor='name'>Name</label>
+                    <br/>
+                    <input 
+                        id='name'
+                        className= 'inputField'
+                        type='text'
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor='email'>Email</label>
+                    <br/>
+                    <input 
+                        id='email'
+                        className= 'inputField'
+                        type='email'
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor='password'>Password</label>
+                    <br/>
+                    <input 
+                        id='password' 
+                        className= 'inputField'
+                        type= 'password'
+                        required
+                    />
+                </div>
                 <input
                     id='submit' 
-                    className = 'inputField'
+                    className= 'inputButton'
                     type='submit'
-                    value={'Login'}
+                    value={'Sign up'}
                     />
                 <p 
-                    id='registerLink'
-                    className="linkText">
-                    Register
+                    id='register'
+                    className= 'linkText'>
+                    {"Already have an account? Login"}
                 </p>
 
             </div>
