@@ -1,4 +1,5 @@
 import './login.css';
+import { Link } from 'react-router-dom';
 
 const Login = ()=>{
     return(
@@ -29,17 +30,22 @@ const Login = ()=>{
                         {"Forgot your password?"}
                     </p>
                 </div>
-                <input
-                    id='submit' 
-                    className= 'inputButton'
-                    type='submit'
-                    value={'Login'}
+                <Link to='/profile' className='reactLink'>
+                    <input
+                        id='submit' 
+                        className= 'inputButton'
+                        type='submit'
+                        value={'Login'}
                     />
-                <p 
-                    id='register'
-                    className= 'linkText'>
-                    {"Don't have an account? Sign up"}
-                </p>
+                </Link>
+                <Link to='/register' className='reactLink'>
+                    <p  
+                        id='register'
+                        className= 'linkText'>
+                        {"Don't have an account? Sign up"}
+                    </p>
+                </Link>
+
 
             </div>
         </div>

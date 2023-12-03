@@ -1,4 +1,5 @@
 import '../Login/login.css';
+import { Link } from 'react-router-dom';
 
 const Register = ()=>{
     return(
@@ -36,18 +37,22 @@ const Register = ()=>{
                         required
                     />
                 </div>
-                <input
-                    id='submit' 
-                    className= 'inputButton'
-                    type='submit'
-                    value={'Sign up'}
+                <Link to='/' className='reactLink'>
+                    <input
+                        id='submit' 
+                        className= 'inputButton'
+                        type='submit'
+                        value={'Sign up'}
                     />
-                <p 
-                    id='register'
-                    className= 'linkText'>
-                    {"Already have an account? Login"}
-                </p>
+                </Link>
 
+                <Link to='/' className='reactLink'>
+                    <p 
+                        id='register'
+                        className= 'linkText'>
+                        {"Already have an account? Login"}
+                    </p>
+                </Link>
             </div>
         </div>
     )
