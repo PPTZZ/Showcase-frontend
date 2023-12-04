@@ -1,10 +1,12 @@
 import './login.css';
 import { Link } from 'react-router-dom';
+import desktop from './desktop.jpg'
+
 
 const Login = ()=>{
     return(
         <div className='cardContainer'>
-            <img src='/desktop-image.svg' className='backgroundImage'/>
+            <img src ={desktop} className='backgroundImage'/>
             <div className='card'>
                 <h1>Login</h1>
                 <div>
