@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import './prfile.css';
 import { Link, Outlet } from 'react-router-dom';
+import Modal from '../Modal/Modal';
 import Upload from '../Upload/Upload';
 
 const Profile = () =>{
+    
+    const [isOpen, setIsOpen] = useState(false)
+    
     return(
         <>
             <nav>
@@ -44,9 +49,14 @@ const Profile = () =>{
                             <p>Drafts({'0'})</p>
                         </Link>
                         <div className='canvas'>
-                        <Upload>
-                            <button className='uploadBtn'><img src='/add.svg'/>New project </button>
-                        </Upload>
+                            <button
+                                onClick={()=> setIsOpen(true)}
+                                className='uploadBtn'>
+                                <img src='/add.svg'/>New project
+                            </button>
+                            <Modal open={isOpen} onClose={()=> setIsOpen(false)}>
+                                <Upload onClose={()=> setIsOpen(false)}/>
+                            </Modal>
                         </div>
                     </div>
 
