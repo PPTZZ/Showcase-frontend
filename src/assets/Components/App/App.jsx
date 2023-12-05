@@ -5,6 +5,7 @@ import Register from "../Register/Register";
 import Profile from "../Profile/Profile";
 
 
+
 const App = ()=> {
 
 
@@ -13,7 +14,7 @@ const App = ()=> {
         <Routes>
             <Route path='/' element = { <Login/> } />
             <Route path="/register" element = { <Register/> } />
-            <Route path='profile' element = { <Profile/> } />
+            <Route path='/profile' element = { <Profile/> } />
         </Routes>
         </>
     )

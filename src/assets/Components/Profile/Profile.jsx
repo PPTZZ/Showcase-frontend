@@ -1,5 +1,6 @@
 import './prfile.css';
 import { Link, Outlet } from 'react-router-dom';
+import Upload from '../Upload/Upload';
 
 const Profile = () =>{
     return(
@@ -36,18 +37,19 @@ const Profile = () =>{
                         </div>
                     </div>
                     <div className='display'>
-                        <Link to='/projects' className='reactLink'>
+                        <Link to='/projects' className='reactLink projects'>
                             <p>Projects</p>
                         </Link>
-                        <Link to='/drafts' className='reactLink'>
+                        <Link to='/drafts' className='reactLink drafts'>
                             <p>Drafts({'0'})</p>
                         </Link>
-                    </div>
-                    <div className='canvas'>
-                        <Link to='/upload' className='reactLink'>
+                        <div className='canvas'>
+                        <Upload>
                             <button className='uploadBtn'><img src='/add.svg'/>New project </button>
-                        </Link>
+                        </Upload>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </>
