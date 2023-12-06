@@ -1,7 +1,7 @@
 
-import './upload.css';
+import './edit.css';
 
-const Upload = ({ onClose })=>{
+const Edit = ({ onClose })=>{
 
     return(
         <>
@@ -36,4 +36,4 @@ const Upload = ({ onClose })=>{
     )
 }
 
-export default Upload;
+export default Edit;

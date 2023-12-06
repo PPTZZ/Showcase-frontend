@@ -3,7 +3,7 @@ import './card.css'
 const Card = () => {
     return (
         <>
-        <div className='card'>
+        <div className='displayCard'>
             <img src='/test pic 1.jpeg' className='cardImage'/>
             <div className='hiddenCard hidden'>
                 <div className='edit hiddenButton'>

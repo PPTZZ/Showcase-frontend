@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.card{
+.displayCard{
     width: 370px;
     height: 250px;
     position: relative;
@@ -66,14 +66,9 @@
     cursor: pointer;
 }
 
-.card:hover .hiddenCard{
+.displayCard:hover .hiddenCard{
     opacity: 0.8;
     width: 370px;
     height: 250px;
     
 }
-
-
-
-
-
