@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './prfile.css';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import Upload from '../Upload/Upload';
 import CardList from '../CardList/Cardlist';
@@ -57,10 +57,10 @@ const Profile = () =>{
                                 <img src='/add.svg'/>New project
                             </button>
                             </nav>
-                            <CardList/>
                             <Modal open={isOpen} onClose={()=> setIsOpen(false)}>
                                 <Upload onClose={()=> setIsOpen(false)}/>
                             </Modal>
+                            <CardList/>
                         </div>
                     </div>
 

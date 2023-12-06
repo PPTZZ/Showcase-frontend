@@ -134,13 +134,16 @@ a{
     background: rgba(255, 255, 255, 0.90);
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(10px);
-    height: 93vh;
+    height: 85vh;
     width: 99%;
 }
 
 .uploadBtn{
     width: 157px;
     height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1E84FC;
     border-radius: 6px;
     border: 0  solid;

@@ -1,4 +1,3 @@
-
 import './upload.css';
 
 const Upload = ({ onClose })=>{

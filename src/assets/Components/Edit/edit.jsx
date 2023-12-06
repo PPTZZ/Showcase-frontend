@@ -1,5 +1,4 @@
-
-import './edit.css';
+import '../Upload/upload.css';
 
 const Edit = ({ onClose })=>{
 
@@ -25,10 +24,12 @@ const Edit = ({ onClose })=>{
                         <input id='linkText' className='inputFields' type='text'/>
                     </div>
                     <div className='modalButtonsContainer'>
-                    <button className='cancel modalButtons'
-                        onClick={onClose}
+                    <button 
+                        onClick={()=>onClose}
+                        type='button'
+                        className='cancel modalButtons'
                         >Cancel</button>
-                    <input className='send modalButtons' type='submit' value={'Add project'}/>
+                    <input className='send modalButtons' type='submit' value={'Save'}/>
                     </div>
                 </form>
             </div>

@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 
 
-const Modal = ({ open, children, onClose })=>{
+const Modal = ({ open, children, onClose})=>{
   if(!open) return null
   return createPortal(
     <>

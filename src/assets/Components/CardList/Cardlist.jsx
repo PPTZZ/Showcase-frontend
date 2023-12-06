@@ -3,7 +3,9 @@ import './cardlist.css'
 import { Outlet } from "react-router-dom";
 
 const CardList = () =>{
+
     return(
+    <>
         <div className="cardListView">
             <Card/>
             <Card/>
@@ -11,6 +13,7 @@ const CardList = () =>{
             <Card/>
             <Outlet/>
         </div>
+    </>
     )
 }
 
