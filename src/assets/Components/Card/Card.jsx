@@ -11,7 +11,7 @@ const Card = () => {
                 <>
                  <div className='displayCard'>
                      <img src='/test pic 1.jpeg' className='cardImage'/>
-                     <Link to="/edit/:id">
+                     <Link to="edit/:id">
                          <div className='hiddenCard hidden'>
                              <div
                                 onClick={()=>setHidden(true)}

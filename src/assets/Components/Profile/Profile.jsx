@@ -26,15 +26,15 @@ const Profile = () =>{
                         <a href='mailto:fakemail@yopmail.com'>
                             <div className='email'>
                                 <img src='/mail.svg' />
-                                <p className='marginless'>{"email"}</p>
+                                <p className='marginless'>{"jackb@gmail.com"}</p>
                             </div>
                         </a>
                         <div className='loc'>
                             <img src='/location_on.svg'/>
-                            <p className='marginless'>{"locaton"}</p>
+                            <p className='marginless'>{"Cluj-Napoca, RO"}</p>
                         </div>
                         <div className='lowerPage'>
-                            <button className='uploadBtn'><img src="/edit.svg"/>Edit Profile</button>
+                            <button className='uploadBtn'><img src="/edit.svg"/>Edit profile</button>
                             <p className='member'>Member since: {"date"}</p>
                         </div>
                     </div>
