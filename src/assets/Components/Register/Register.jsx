@@ -1,10 +1,11 @@
 import '../Login/login.css';
 import { Link } from 'react-router-dom';
+import pic from './desktop.jpg'
 
 const Register = ()=>{
     return(
         <div className='cardContainer'>
-            <img src='/desktop-image.svg' className='backgroundImage'/>
+            <img src={pic} className='backgroundImage'/>
             <div className='card'>
                 <h1>Sign up</h1>
                 <div>

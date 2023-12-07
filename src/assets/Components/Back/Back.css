@@ -1,0 +1,60 @@
+.warningBody{
+    width: 480px;
+    height: 240px;
+    border-radius: 16px;
+    background: #FFF; 
+    padding: 40px;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.warninigText1{
+    color: #3E3E3E;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 700;
+    margin: 0;
+}
+
+.warninigText2{
+    color: #656565;
+    font-size: 16px;
+    line-height: 90%;
+}
+
+.warningBtn{
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.warncancel{
+    background-color: #FFF;
+    color: #1E84FC;
+    border: 2px solid #1E84FC;
+    position: relative;
+    top: 30px;
+    right:40px;
+
+}
+
+.warncancel:hover{
+    cursor: pointer;
+    border: 2px solid #1B79E7;
+}
+
+.warnconfirm{
+    background-color: #1E84FC;
+    color: #FFF;
+    border: 0 solid;
+    position: relative;
+    top: 30px;
+    left:40px;
+}
+.warnconfirm:hover{
+    cursor: pointer;
+    background-color: #1B79E7;
+}

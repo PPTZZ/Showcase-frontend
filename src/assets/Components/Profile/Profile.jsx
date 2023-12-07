@@ -1,6 +1,7 @@
 import './prfile.css';
 import { Link } from 'react-router-dom';
 import CardList from '../CardList/Cardlist';
+import keyboard from './keyboard.jpg'
 
 const Profile = () =>{
     
@@ -15,7 +16,7 @@ const Profile = () =>{
             </nav>
             <div>
                 <div className='keyboardContainer'>
-                    <img src='/keyboard.svg' width={'100%'}/>
+                    <img src={keyboard} className='keyboard'/>
                 </div>
                 <div className='bodyContainer'>
                     <div className='sidebar'>

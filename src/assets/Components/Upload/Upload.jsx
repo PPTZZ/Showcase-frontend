@@ -1,8 +1,13 @@
 import './upload.css';
+import Back from '../Back/Back';
 import { Link } from 'react-router-dom';
+import Modal from '../Modal/Modal'
+import { useState } from 'react';
 
 const Upload = ()=>{
 
+    const [state, setState] = useState(false)
+        
     return(
     <>
         <nav>
@@ -13,12 +18,15 @@ const Upload = ()=>{
             </Link>
         </nav>
         <div className='uploadPage'>
-            <Link to='/profile' className='reactLink'>
-                <div className='backBtn'>
+                <div
+                    onClick={()=>setState(true)}
+                    className='backBtn'>
                     <img src="/arrow_back.svg"/>
                     <p className='backText'>Back</p>
                 </div>
-            </Link>
+            <Modal open={state}>
+                <Back close={()=>setState(false)}/>
+            </Modal>
             <div className='formBody'>
                 <form action="http://localhost:3000/" encType="multipart/form-data" method="post">
                     <label htmlFor='picSelect' className='picFrame'>

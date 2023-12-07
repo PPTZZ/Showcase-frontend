@@ -35,6 +35,8 @@ nav{
 
 
 .keyboard{
+    height: 249px;
+    width: 100%;
     object-fit: contain;
 }
 
