@@ -1,13 +1,8 @@
-import { useState } from 'react';
 import './prfile.css';
 import { Link } from 'react-router-dom';
-import Modal from '../Modal/Modal';
-import Upload from '../Upload/Upload';
 import CardList from '../CardList/Cardlist';
 
 const Profile = () =>{
-    
-    const [isOpen, setIsOpen] = useState(false)
     
     return(
         <>
@@ -38,28 +33,21 @@ const Profile = () =>{
                             <p className='marginless'>{"locaton"}</p>
                         </div>
                         <div className='lowerPage'>
-                            <button className='profileBtn'><img src="/edit.svg"/>Edit Profile</button>
+                            <button className='uploadBtn'><img src="/edit.svg"/>Edit Profile</button>
                             <p className='member'>Member since: {"date"}</p>
                         </div>
                     </div>
                     <div className='display'>
-                        <Link to='/projects' className='reactLink projects'>
-                            <p>Projects</p>
-                        </Link>
-                        <Link to='/drafts' className='reactLink drafts'>
-                            <p>Drafts({'0'})</p>
-                        </Link>
                         <div className='canvas'>
                             <nav className='uploadNav'>
-                            <button
-                                onClick={()=> setIsOpen(true)}
-                                className='uploadBtn'>
-                                <img src='/add.svg'/>New project
-                            </button>
+                            <p className='pageTitle'>Projects</p>
+                            <Link to={"/upload"}>
+                                <button
+                                    className='uploadBtn'>
+                                    <img src='/add.svg'/>New project
+                                </button>
+                            </Link>
                             </nav>
-                            <Modal open={isOpen} onClose={()=> setIsOpen(false)}>
-                                <Upload onClose={()=> setIsOpen(false)}/>
-                            </Modal>
                             <CardList/>
                         </div>
                     </div>

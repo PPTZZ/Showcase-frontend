@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 
 
 
-const Modal = ({ open, children, onClose})=>{
+const Modal = ({ open, children })=>{
   if(!open) return null
   return createPortal(
     <>
-      <div className='overlay' onClick={onClose}/>
+      <div className='overlay'/>
       <div className="upload">
           {children}
       </div>

@@ -1,14 +1,33 @@
 import '../Upload/upload.css';
+import './edit.css'
+import { Link } from 'react-router-dom';
 
-const Edit = ({ onClose })=>{
+const Edit = ()=>{
 
     return(
-        <>
+    <>
+        <nav>
+            <img src='/Logo.svg' alt='Logo' className='logo'/>
+            <img src='/bell icon.svg' alt='subscriibe bell' className='subscribe'/>
+            <Link to='/' className='reactLink logOut'>
+                <p className='logOut'>Log Out</p>
+            </Link>
+        </nav>
+        <div className='uploadPage'>
+            <Link to='/profile' className='reactLink'>
+                <div className='backBtn'>
+                    <img src="/arrow_back.svg"/>
+                    <p className='backText'>Back</p>
+                </div>
+            </Link>
             <div className='formBody'>
                 <form action="http://localhost:3000/" encType="multipart/form-data" method="post">
-                    <label htmlFor='picSelect' className='picFrame'>
-                        <img src='/upload.svg' alt='upload'/>
-                        <p className='uploadText'>Upload picture</p>
+                    <label htmlFor='picSelect'>
+                        <img src='/test pic 1.jpeg' alt='' className='selectedPic'/>
+                        <div className='hiddenOptions'>
+                            
+
+                        </div>
                     </label>
                     <input className='picFrame' id='picSelect' type='file' style={{display:'none'}}/>
                     <div>
@@ -17,23 +36,20 @@ const Edit = ({ onClose })=>{
                     </div>
                     <div>
                         <label htmlFor='descText' className='inputLabel'>Description</label>
-                        <textarea id='descText' className=' descField' type='textarea'  maxLength={'400'}/>
+                        <textarea id='descText' className=' descField' type='textarea'/>
                     </div>
                     <div>
                         <label htmlFor='linkText' className='inputLabel'>Link</label>
                         <input id='linkText' className='inputFields' type='text'/>
                     </div>
-                    <div className='modalButtonsContainer'>
-                    <button 
-                        onClick={()=>onClose}
-                        type='button'
-                        className='cancel modalButtons'
-                        >Cancel</button>
-                    <input className='send modalButtons' type='submit' value={'Save'}/>
+                    <div className='submitButtonContainer'>
+                    <button className='delete'>Delete Project</button>
+                    <input className='save submitButton' type='submit' value={'Add project'}/>
                     </div>
                 </form>
             </div>
-        </>
+        </div>
+    </>
     )
 }
 
