@@ -2,12 +2,14 @@ import '../Upload/upload.css';
 import './edit.css'
 import { Link } from 'react-router-dom';
 import Back from '../Back/Back';
+import Delete from '../Delete/delete';
 import Modal from '../Modal/Modal';
 import { useState } from 'react';
 
 const Edit = ()=>{
 
     const [state, setState] = useState(false)
+    const [state2, setState2] = useState(false)
 
     return(
     <>
@@ -51,10 +53,17 @@ const Edit = ()=>{
                         <input id='linkText' className='inputFields' type='text'/>
                     </div>
                     <div className='submitButtonContainer'>
-                    <button className='delete'>Delete Project</button>
                     <input className='save submitButton' type='submit' value={'Add project'}/>
                     </div>
                 </form>
+                <div>
+                    <Modal open={state2}>
+                        <Delete/>
+                    </Modal>
+                    <button
+                        onClick={()=>setState2(true)}
+                        className='delete'>Delete Project</button>
+                </div>
             </div>
         </div>
     </>
