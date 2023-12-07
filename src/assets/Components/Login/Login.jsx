@@ -9,6 +9,17 @@ const Login = ()=>{
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
 
+    const onSubmitSignin = ()=> {
+        fetch('http://localhost:3000/login', {
+            method:'post',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                email: email,
+                password: pass
+            })
+        })
+    }
+
     return(
         <div className='cardContainer'>
             <img src ={desktop} className='backgroundImage'/>
@@ -43,7 +54,7 @@ const Login = ()=>{
                 </div>
                 <Link to='/profile' className='reactLink'>
                     <input
-                        onSubmit={()=>console.log(email, pass)}
+                        onSubmit={()=>onSubmitSignin}
                         id='submit' 
                         className= 'inputButton'
                         type='submit'
